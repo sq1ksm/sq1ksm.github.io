@@ -1,0 +1,10 @@
+body{
+    background-color: #031507;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 800px;
+}
+header{
+    font-size: 2rem;
+    color: #d0eb6a;
+}
