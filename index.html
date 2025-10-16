@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Przycisk na środku</title>
+  <title>Promienisty przycisk</title>
   <style>
     body {
       margin: 0;
@@ -10,12 +10,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #f0f2f5;
+      background: radial-gradient(circle at center, #ffffff 0%, #e0e8f5 40%, #003366 100%);
       font-family: sans-serif;
+      overflow: hidden;
     }
 
     .fancy-button {
-      padding: 14px 28px;
+      position: relative;
+      padding: 18px 32px;
       font-size: 18px;
       font-weight: bold;
       color: white;
@@ -23,17 +25,73 @@
       border: none;
       border-radius: 8px;
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      text-align: center;
+      line-height: 1.6;
+      box-shadow: 0 0 20px rgba(0, 120, 212, 0.6);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      z-index: 1;
     }
 
     .fancy-button:hover {
       background-color: #005a9e;
+      box-shadow: 0 0 30px rgba(0, 90, 158, 0.8);
+    }
+
+    .rays {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300px;
+      height: 300px;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .ray {
+      position: absolute;
+      width: 2px;
+      height: 100px;
+      background: rgba(0, 120, 212, 0.4);
+      top: 50%;
+      left: 50%;
+      transform-origin: center bottom;
+      opacity: 0;
+      animation: pulse 1s ease-out forwards;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0; transform: scaleY(0.2); }
+      50% { opacity: 1; transform: scaleY(1); }
+      100% { opacity: 0; transform: scaleY(0.2); }
     }
   </style>
 </head>
 <body>
 
-  <a href="https://sq1ksm.pzk.pl/" class="fancy-button" target="_blank">Przejdź na stronę</a>
+  <a href="https://sq1ksm.pzk.pl/" class="fancy-button" target="_blank">
+    Przejdź na moją stronę<br>https://sq1ksm.pzk.pl/
+    <div class="rays" id="rays"></div>
+  </a>
+
+  <script>
+    function emitRays() {
+      const container = document.getElementById('rays');
+      container.innerHTML = '';
+      const count = Math.floor(Math.random() * 6) + 4; // 4–9 promieni
+      for (let i = 0; i < count; i++) {
+        const ray = document.createElement('div');
+        ray.className = 'ray';
+        const angle = Math.random() * 360;
+        ray.style.transform = `rotate(${angle}deg) translate(-50%, -100%)`;
+        container.appendChild(ray);
+      }
+    }
+
+    setInterval(() => {
+      emitRays();
+    }, Math.floor(Math.random() * 4000) + 3000); // co 3–7 sekundy
+  </script>
 
 </body>
 </html>
