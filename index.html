@@ -2,17 +2,26 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Przycisk do strony</title>
+  <title>Przycisk na środku</title>
   <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f2f5;
+      font-family: sans-serif;
+    }
+
     .fancy-button {
-      display: inline-block;
-      padding: 12px 24px;
-      font-size: 16px;
+      padding: 14px 28px;
+      font-size: 18px;
       font-weight: bold;
       color: white;
       background-color: #0078D4;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       text-decoration: none;
       transition: background-color 0.3s ease;
     }
