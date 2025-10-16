@@ -1,56 +1,98 @@
 <!DOCTYPE html>
+<!-- Deklaracja typu dokumentu jako HTML5 -->
 <html lang="pl">
+<!-- Główny element HTML z deklaracją języka polskiego -->
 <head>
+  <!-- Sekcja nagłówkowa zawierająca metadane -->
   <meta charset="UTF-8">
+  <!-- Deklaracja kodowania znaków -->
   <title>Subtelny pulsujący gradient</title>
+  <!-- Tytuł strony widoczny w zakładce przeglądarki -->
   <style>
+    /* Sekcja stylów CSS */
     body {
       margin: 0;
+      /* Usunięcie domyślnych marginesów przeglądarki */
       height: 100vh;
+      /* Wysokość równa 100% widocznego obszaru (viewport height) */
       display: flex;
+      /* Użycie flexboxa do wyśrodkowania */
       justify-content: center;
+      /* Poziome wyśrodkowanie */
       align-items: center;
+      /* Pionowe wyśrodkowanie */
       font-family: sans-serif;
+      /* Czcionka bezszeryfowa */
       background: radial-gradient(circle, #c0c8d8 0%, #e0e8f5 40%, #003366 100%);
+      /* Gradient promienisty od jasnoniebieskiego do ciemnogranatowego */
       background-size: 115% 115%;
+      /* Powiększenie tła aby stworzyć przestrzeń do animacji */
       background-position: center;
+      /* Początkowa pozycja tła */
       animation: gradientFlow 10s ease-in-out infinite;
+      /* Animacja tła: nazwa, czas, funkcja timing, powtarzanie */
     }
 
     @keyframes gradientFlow {
-      0%   { background-position: center; background-size: 115% 115%; }
-      50%  { background-position: 10px 10px; background-size: 120% 120%; }
-      100% { background-position: center; background-size: 115% 115%; }
+      /* Definicja klatek animacji */
+      0%   { 
+        background-position: center; 
+        background-size: 115% 115%; 
+      }
+      50%  { 
+        background-position: 10px 10px; 
+        /* Lekkie przesunięcie tła */
+        background-size: 120% 120%; 
+        /* Lekkie powiększenie tła */
+      }
+      100% { 
+        background-position: center; 
+        background-size: 115% 115%; 
+      }
     }
 
     .fancy-button {
       padding: 18px 32px;
+      /* Wewnętrzne odstępy przycisku */
       font-size: 18px;
+      /* Rozmiar czcionki */
       font-weight: bold;
+      /* Pogrubienie tekstu */
       color: white;
+      /* Kolor tekstu */
       background-color: #0078D4;
+      /* Kolor tła przycisku - niebieski */
       border: none;
+      /* Usunięcie obramowania */
       border-radius: 8px;
+      /* Zaokrąglenie rogów */
       text-decoration: none;
+      /* Usunięcie podkreślenia dla linku */
       text-align: center;
+      /* Wyśrodkowanie tekstu */
       line-height: 1.6;
+      /* Wysokość linii tekstu */
       box-shadow: 0 0 20px rgba(0, 120, 212, 0.6);
+      /* Niebieska poświata */
       transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      /* Płynne przejścia dla hover */
     }
 
     .fancy-button:hover {
+      /* Styl dla stanu najechania kursorem */
       background-color: #005a9e;
+      /* Ciemniejszy odcień niebieskiego */
       box-shadow: 0 0 30px rgba(0, 90, 158, 0.8);
+      /* Wzmocniona poświata */
     }
   </style>
 </head>
 <body>
-
+  <!-- Główna zawartość strony -->
   <a href="https://sq1ksm.pzk.pl/" class="fancy-button" target="_blank">
+    <!-- Link z klasą stylującą i atrybutem otwierania w nowej karcie -->
     Przejdź na moją stronę<br>sq1ksm.pzk.pl
+    <!-- Tekst przycisku z łamaniem linii -->
   </a>
-
 </body>
 </html>
-
-
