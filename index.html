@@ -1,174 +1,30 @@
 <!DOCTYPE html>
-<HTML lang=pl>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Przycisk do strony</title>
+  <style>
+    .fancy-button {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background-color: #0078D4;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
 
-<HEAD>
-      <TITLE>SQ1KSL/SQ1KSM</TITLE>
-      <META http-equiv=content-type content="text/html; charset=utf-8">
-      <meta http-equiv="pragma" content="no-cache">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <META NAME="keywords"
-            CONTENT="slawera, SQ1KSM, SQ1KSL, Weronika, Slawek, Krzesnica, Kostrzyn, Krotkofalarstwo, Hamradio">
-      <meta name="description" content="Strona SQ1KSM i SQ1KSl.">
-      <script src="lib/jquery-3.3.1.min.js" type="text/javascript"></script>
-      <!---zamiast u góry-Piotr: <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> ---->
-      <script src="lib/script_1.js" defer></script>
-      <script type="text/javascript" language="javascript" src="lib/lytebox.js" defer></script>
-      <link rel="stylesheet" href="lib/lytebox.css" type="text/css" media="screen" />
-      <link rel="stylesheet" href="lib/styles.css">
-      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-      <!---usunolem: <LINK href="images/favicon.gif" type=image/ico rel="shortcut icon"></script> ---->
-      <!---usunolem / przed favicon 2 linie wcześniej ---->
+    .fancy-button:hover {
+      background-color: #005a9e;
+    }
+  </style>
+</head>
+<body>
 
-</HEAD>
-<!---------Poczek strony-------->
+  <a href="https://sq1ksm.pzk.pl/" class="fancy-button" target="_blank">Przejdź na stronę</a>
 
-<BODY>
-      <DIV id=sidebar>
-            <!-----------Logo Literowe--------------->
-            <H1>
-                  <A href="http://sq1ksm.pzk.pl">.SQ1KSL...<br>...SQ1KSM.</A>
-            </H1>
-            <!-------------Menu strony---------------->
-            <div class="dropdown">
-                  <div id='cssmenu'>
-                        <ul><!-- menu glowne i informacje -->
-                              <li class='active'><a href="index.html"><span>Strona Główna</span></a></li>
-                              <li class='has-sub'><a href="#"><span>Krótkofalarstwo</span></a>
-                                    <ul>
-                                          <li><a href="kf.html"><span>Sprzęt<span></a></li>
-                                          <li><a href="tria.html"><span>Tytus Romek i aTomek<span></a></li>
-                                          <li><a href="ameryka.html"><span>Nowa Ameryka</span></a></li>
-                                          <li><a href="poryroku.html"><span>4 pory roku</span></a></li>
-                                          <li><a href="dzieci.html"><span>Amateur Kids Day</span></a></li>
-                                          <li><a href="twierdza.html"><span>Twierdza Kostrzyn nad Odrą</span></a></li>
-                                          <li><a href="smolnica.html"><span>Smolnica</span></a></li>
-                                          <li><a href="chwarszczany.html"><span>Chwarszczany</span></a></li>
-                                          <li><a href="pszczelnik.html"><span>Pszczelnik</span></a></li>
-                                          <li><a href="spff.html"><span>Parki SPFF</span></a></li>
-                                          <li><a href="aprs.html"><span>APRS</span></a></li>
-                                          <li><a href="ekoqsl.html"><span>Eko-QSL</span></a></li>
-                                          <li><a href="817.html"><span>QRP FT-817</span></a></li>
-                                    </ul>
-                              </li>
-                              <li class='has-sub'><a href="#"><span>LOGI</span></a>
-                                    <ul>
-                                          <li><a href="log_sq1ksm.html"><span>SQ1KSM</span></a></li>
-                                          <li><a href="log_sq1ksl.html"><span>SQ1KSL</span></a></li>
-                                    </ul>
-                              </li>
-                              <li class='has-sub'><a href="#"><span>Fotografia</span></a>
-                                    <ul>
-                                          <li><a href="foto.html"><span>Nasze prace</span></a></li>
-                                          <li><a href="analogowa.html"><span>Analogowa</span></a></li>
-                                    </ul>
-                              </li>
-                              <li class='has-sub'><a href="#"><span>Informatyka</span></a>
-                                    <ul>
-                                          <li><a href="webmastering.html"><span>Webmastering</span></a></li>
-                                          <li><a href="piotrus.html"><span>Piotruś</span></a></li>
-                                          <li><a href="wm.html"><span>Windows Mobile</span></a></li>
-                                          <li><a href="c64.html"><span>Stare Komputery</span></a></li>
-                                    </ul>
-                              </li>
-                              <li class='has-sub'><a href="#"><span>SWL & SAT</span></a>
-                                    <ul>
-                                          <li><a href="dlugie.html"><span>Fale długie i średnie</span></a></li>
-                                          <li><a href="sat.html"><span>Odbiór satelitarny</span></a></li>
-                                    </ul>
-                              </li>
-                              <li><a href="inne.html"><span>Inne</span></a></li>
-                        </ul>
-                  </div>
-                  <!---------Koniec Menu strony------------->
-            </div>
-            <!---------Tresc strony------------->
-
-            <br>
-            <article>
-                  <!-- INFORMACJE -->
-                  <p>
-                        --------- <b>Informacje </b>--------- <br><br>
-                        ---17.04.2023--------<br>Aktualizacja strony -<br>
-                        rezygnacja z php.<br><br>
-                        ---17.04.2017--------<br>Zmiana serwera i adresu.<br><br>
-                        ---17.04.2015--------<br>Wielka rozbudowa strony.<br><br>
-                        ---13.07.2009--------<br>Zmiana wyglądu strony - optymalizacja.<br><br>
-                        ---06.02.2004--------<br>Zalążek strony.
-                  </p>
-            </article>
-      </div>
-      </P>
-      <DIV id=content>
-            <h1>
-                  Witam!
-            </h1>
-            <div class=lead>
-                  <!-- tresc-->
-                  <article>
-                        <p>
-                              Strona Weroniki SQ1KSL i Sławka SQ1KSM. <br>
-                              Znajdziesz tutaj garść informacji z: krótkofalarstwa, fotografii, informatyki, radia i
-                              sat.
-                              <br><br>
-                              Na tej stronie prezętuję będę moje prace z z w/w dziedzin. Znajdziesz tu również wiele
-                              zdjęc i informacji, które zebrały się przez kilka lat związane ze środowiskiem
-                              krótkofalarskim.
-                        </p>
-                  </article>
-                  <article>
-                        <h1>Polecam</h1>
-                        <p>
-                              Na początek kilka fotek na początek (Minolta Z2 i przekazy z tunera satelitarnego SS2 -z
-                              przed 2015 roku).
-                        </p>
-                  </article>
-                  <!-- Fotki-->
-                  <div style="text-align: center;">
-                        <a href="zdjecia\index/01.webp" rel="lyteshow[vacation]"
-                              title="Wyjatkowa klepka -Minolta Z2"><img src="zdjecia\index/01_m.webp" width="128"
-                                    height="96" alt="" /></a>
-                        <a href="zdjecia\index/02.webp" rel="lyteshow[vacation]" title="Przekazy TVN24 -SS2"><img
-                                    src="zdjecia\index/02_m.webp" width="128" height="96" alt="" /></a>
-                        <a href="zdjecia\index/03.webp" rel="lyteshow[vacation]"
-                              title="I w TVN jest czasem nudno...-SS2"><img src="zdjecia\index/03_m.webp" width="128"
-                                    height="96" alt="" /></a>
-                        <a href="zdjecia\index/04.webp" rel="lyteshow[vacation]" title="Opera-SS2"><img
-                                    src="zdjecia\index/04_m.webp" width="128" height="96" alt="" /></a><br>
-                        <a href="zdjecia\index/05.webp" rel="lyteshow[vacation]" title="Gorejacy krzak -Minolta Z2"><img
-                                    src="zdjecia\index/05_m.webp" width="128" height="96" alt="" /></a>
-                        <a href="zdjecia\index/06.webp" rel="lyteshow[vacation]" title="Nasiona wiosny -Minolta Z2"><img
-                                    src="zdjecia\index/06_m.webp" width="128" height="96" alt="" /></a>
-                        <a href="zdjecia\index/07.webp" rel="lyteshow[vacation]"
-                              title="Nie jestem taka mala -Minolta Z2"><img src="zdjecia\index/07_m.webp" width="128"
-                                    height="96" alt="" /></a>
-                        <a href="zdjecia\index/08.webp" rel="lyteshow[vacation]"
-                              title="W zimie nie jest prosto -Minolta Z2"><img src="zdjecia\index/08_m.webp" width="128"
-                                    height="96" alt="" /></a><br>
-                        <a href="zdjecia\index/09.webp" rel="lyteshow[vacation]" title="Bocian -Minolta Z2"><img
-                                    src="zdjecia\index/09_m.webp" width="128" height="96" alt="" /></a>
-                        <a href="zdjecia\index/10.webp" rel="lyteshow[vacation]" title="Lampa -Minolta Z2"><img
-                                    src="zdjecia\index/10_m.webp" width="128" height="96" alt="" /></a>
-                        <a href="zdjecia\index/11.webp" rel="lyteshow[vacation]"
-                              title="Morska przystan -Minolta Z2"><img src="zdjecia\index/11_m.webp" width="128"
-                                    height="96" alt="" /></a>
-                        <a href="zdjecia\index/12.webp" rel="lyteshow[vacation]" title="Wieje od wody -Minolta Z2"><img
-                                    src="zdjecia\index/12_m.webp" width="128" height="96" alt="" /></a>
-                        <br>
-                        <P>
-                        <h2>Proszę kliknac na dowolne zdjęcie- uruchomi się przeglądarka zdjęć.</h2>
-                        </P>
-                  </div>
-            </div>
-      </div>
-      <!--Stopa strony-->
-      <footer>
-            <div class="stopa">
-                  <hr style="width: 70%;">
-                  © 2004-2023 slawera
-                  <hr style="width: 80%;">
-                  </b></font>
-            </div>
-      </footer>
-</BODY>
-
-</HTML>
+</body>
+</html>
